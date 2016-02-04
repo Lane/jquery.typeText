@@ -6,14 +6,14 @@ Prints the contents of an element, or prints a string inside an element one char
 ## Usage
 
 ```javascript
-// prints the string in a paragraph appended to #element
+// prints the text in all of the children DOM nodes of the provided selector
 $("#element").typeText();
 ```
 
 or
 
 ```javascript
-// prints the string in a paragraph appended to #element
+// prints the string in a paragraph appended to the selector
 $("#element").typeText("This is a line of text.");
 ```
 
