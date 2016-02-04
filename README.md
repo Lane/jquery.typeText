@@ -5,6 +5,8 @@ Prints the contents of an element, or prints a string inside an element one char
 
 ## Usage
 
+**`typeText( [string], [Object] )`**
+
 ```javascript
 // prints the text in all of the children DOM nodes of the provided selector
 $("#element").typeText();
