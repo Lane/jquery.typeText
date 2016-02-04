@@ -24,3 +24,7 @@ $("#element").typeText("This is a line of text.");
   - `lineWait`: amount of time to wait between lines (elements)
   - `typeSpeed`: the delay in milliseconds to wait between each character
   - `then`: a function to execute once printing is complete
+
+## Limitations
+
+  - Does not print deep levels of nested nodes
