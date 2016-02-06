@@ -22,7 +22,7 @@
       addString = arguments[0]
       options = arguments[1]
     else
-      throw "improper number of args"
+      throw new Error "incorrect number of args for typeText"
     
     # default options if necessary
     defaultOptions =
@@ -31,7 +31,7 @@
       then: ->
 
     # extended options
-    options = $.extend(defaultOptions, options)
+    options = $.extend defaultOptions, options
     
     # for each element in the selection
     this.each ->
@@ -56,12 +56,10 @@
       # for every tick. Clears the timer and triggers
       # any callbacks when finished
       onTick = =>
-        
         if index < wholeString.length
           # add a character to the string
           printedString += wholeString[index++]
           setString()
-          
         else
           # finished printing the string, 
           # clean up and print the next line
@@ -72,8 +70,8 @@
             # print the next line
             setTimeout =>
               currentEl.removeClass "printing"
-              currentEl = $(this).children().eq(lineIndex)
-              printLine(stringArray[lineIndex++])
+              currentEl = $(this).children().eq lineIndex
+              printLine stringArray[lineIndex++]
             , options.lineWait
             
           else
